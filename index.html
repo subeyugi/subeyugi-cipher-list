@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>全て遊戯の所為です。　暗号一覧</title>
+</head>
+<body id="body">
+  <header>
+    <h1>全て遊戯の所為です。　暗号一覧</h1>
+  </header>
+
+  <nav>
+    <ul class="ul_header">
+      <li class="select"><a href="index.html" class="li_song">暗号一覧</a></li>
+      <li><a class="li_song">履歴</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <div class="left">
+      <ul class="ul_left" id="songList">
+      </ul>
+      <div>
+        <label for="title"></label>タイトル</label>
+        <input type="text" name="title" id="title">
+      </div>
+      <div>
+        <label for="author"></label>作者</label>
+        <input type="text" name="author" id="author">
+      </div>
+      <button type="button" onclick="sendSongButtonClicked()">曲追加</button>
+    </div>
+    <div class="right">
+      <div class="rightTop">
+        <span class="songTitle" id="cipherTitle"></span>
+        <span class="solveBoxArea" id="solveBoxArea"></span>
+        <input class="boxEditButton" id="boxEditButton" type="button" value="解読追加">
+      </div>
+      <div class="rightScrollArea">
+        <div class="cipherResult" id="cipherResult"></div>
+      </div>
+    </div>
+  </div>
+  <div class="cipherInputDialog" id="cipherInputDialog" style="display:none">
+    <div class="closeButton" onclick="closeButtonClicked()">x</div>
+    <div id="cipherInputDialogSong">song = </div>
+    <div id="cipherInputDialogCipher">cipher = </div>
+    <div class="postContainer">
+        <div class="postLeft">
+            <button type="button" onclick="breakLineBtnClicked()">改行</button>
+            <button type="button" onclick="planeBtnClicked()">プレーンテキスト</button>
+            <button type="button" onclick="colorBtnClicked()">色</button>
+            <textarea id="postTextarea" placeholder="markdown形式で入力" spellcheck="false"></textarea>
+        </div>
+            <div class="postRight" id="postRight"></div>
+        </div>
+        <input type="button" class="postButton" value="送信" onclick="sendCipherButtonClicked()">
+    </div>
+  </div>
+  <script src="variable.js"></script>
+  <script src="front.js"></script>
+  <script src="api.js"></script>
+  <script>
+    showSongs();
+  </script>
+</body>
+</html>

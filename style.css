@@ -1,0 +1,400 @@
+*{
+    font-size: 16px;
+}
+
+html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #101010;
+    color: #f0f0f0;
+}
+
+h1{
+    margin: 0px;
+    padding :10px;
+    padding-left: 35px;
+    font-size: 26px;
+    color: #f0f0f0;
+}
+
+header{
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
+    background-color: #404040;
+    color: #f0f0f0;
+}
+
+nav{
+    padding:0px;
+    padding-left: 20px;
+    color: #f0f0f0;
+}
+
+.li_header{
+    list-style: none;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f0f0f0;
+}
+
+.ul_header{
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    width: calc(100% - 20px);
+    list-style: none;
+    color: #f0f0f0;
+}
+
+.li_song{
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    margin: 10px;
+}
+
+.select{
+    background-color: #404040;
+    color: #f0f0f0;
+}
+
+.li_song:hover{
+    background-color: #505050;
+    color: #f0f0f0;
+}
+
+.li_left{
+    list-style: none;
+    padding: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #f0f0f0;
+}
+
+.ul_left{
+    padding: 0px;
+    margin: 0px;
+    width: calc(100% - 20px);
+    list-style: none;
+    color: #f0f0f0;
+}
+
+.box_left{
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    background-color: #303030;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    color: #f0f0f0;
+}
+
+::-webkit-scrollbar-track {
+    display: none;
+    color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0,0,0,0);
+}
+
+*:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0,0,0,0.3);  
+}
+
+div {
+    padding: 0px;
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    margin-left: 20px;
+    margin-top: 20px;
+    width: calc(100% - 40px);
+    height: calc(100% - 160px);
+}
+
+.left {
+    width: 500px;
+}
+
+.right {
+    width: calc(100% - 510px);
+    padding-left: 10px;
+    border-left: 1px solid #ffffff;
+}
+
+.box{
+    height: 30px;
+    width: 100%;
+    background-color: #202020;
+    margin: 2px;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.underline{
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.code{
+    display: inline-block;
+    position: relative;
+    font-family: "Noto Sans Mono", monospace;
+    background-color: #303030;
+    margin-top: 2px;
+    /* margin-left: 50px; */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: calc(100% - 20px);
+    min-height: 14px;
+    color: #f0f0f0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.code_existLabel{
+    display: inline-block;
+    position: relative;
+    font-family: "Noto Sans Mono", monospace;
+    background-color: #303030;
+    margin-top: 2px;
+    margin-left: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: calc(100% - 20px);
+    min-height: 14px;
+    color: #f0f0f0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.codescr{
+    display: inline-block;
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;font-variation-settings:"wdth" 100;
+    width: calc(100% - 10px);
+    min-height: 16px;
+    white-space: nowrap;
+    overflow-x: scroll;
+    padding: 0px;
+    color: #f0f0f0;
+}
+
+.codeMain{
+    display: flex;
+    margin: 2px;
+    padding: 8px;
+    background-color: #202020;
+    color: #f0f0f0;
+}
+
+.copyIcon{
+    position: absolute;
+    left: calc(100% - 30px);
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0px;
+    text-align: center;
+    height: 14px;
+    width: 14px;
+    color: #f0f0f0;
+}
+
+.codescr::-webkit-scrollbar{
+    display: none;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.dateBox{
+    padding: 0px;
+}
+
+.subSearchButton{
+    font-size: 14px;
+    height: 30px;
+    width: 50px;
+    color: #f0f0f0;
+}
+
+.nobreak{
+    display: inline;
+}
+
+.rightTop{
+    width: 100%;
+    height: 35px;
+    border-bottom: 1px solid white;
+}
+
+.boxCipher{
+    margin: 15px;
+    padding: 5px;
+    border: 1px solid #303030;
+}
+
+.songTitle{
+    padding-left: 10px;
+    height: 34px;
+    font-size: 24px;
+}
+
+.cipherTitle{
+    height: 30px;
+    font-size: 18px;
+    color: #f0f0f0;
+}
+
+.rightScrollArea{
+    display: flex;
+    height: calc(100% - 30px);
+}
+
+.cipherResult{
+    padding-bottom: 10px;
+    color: #f0f0f0;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.cipherDetails{
+    margin: 6px;
+    margin-left: 30px;
+    background-color: #101010;
+    color: #f0f0f0;
+    font-size: 14px;
+}
+
+.boxEditButton{
+    margin-left: 20px;
+    background-color: #303030;
+    color: #f0f0f0;
+    font-size: 12px;
+}
+
+.cipherInputDialog{
+    --w: calc(min(100% - 40px, 1500px));
+
+    position: absolute;
+    height: 800px;
+    width: var(--w);
+    top: calc((100% - 800px) / 2);
+    left: calc((100% - var(--w)) / 2);
+    padding: 10px;
+    background-color: #101010;
+    z-index: 100;
+    border: 1px solid white;
+    margin: 0px;
+}
+
+textarea{
+    width: calc(100% - 10px);
+    height: calc(100% - 40px);
+    resize: none;
+    background-color: #101010;
+    font-size: 16px;
+    color: #f0f0f0;
+    line-height: 28px;
+}
+
+.postContainer {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+  height: calc(100% - 100px);
+}
+
+.postLeft {
+  width: calc(100% / 2);
+}
+
+.postRight {
+    width: calc(100% / 2);
+    padding-left: 10px;
+    border-left: 1px solid #ffffff;
+}
+
+.postButton{
+    margin-top: 20px;
+    width: 100px;
+    margin-left: calc((100% - 100px) / 2);
+    background-color: #505050;
+    color: #f0f0f0;
+}
+
+.closeButton{
+    position: absolute;
+    top: 0px;
+    left: calc(100% - 30px);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.closeButton:hover{
+    background-color: #862020;
+}
+
+.solveBoxArea{
+    display: inline-block;
+}
+
+.solvedBox{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    padding-top: -10px;
+    font-size: 14px;
+    margin-left: 2px;
+    cursor: default;
+}
+
+.solvedBox.solved{
+    background-color: green;
+}
+
+.solvedBox.unsolved{
+    background-color: red;
+}
+
+.codeContain{
+    display: flex;
+    margin: 0px;
+}
+
+.codeLabel{
+    width: 80px;
+    margin: 0px;
+    padding-top: 2px;
+}
+
+label{
+    width: 100px;
+}
