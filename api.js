@@ -1,7 +1,8 @@
 const url = "https://subeyugi-cipher3.pentate.workers.dev"
 
 async function loadSongs(){
-    await fetch(url + '/get/songs', {headers: { "Access-Control-Allow-Origin": "*"}})
+    console.log(url + '/get/songs')
+    await fetch(url + '/get/songs')
         .then((response) => response.json())
         .then((data) => {
             data.forEach(e => {
@@ -15,7 +16,7 @@ async function loadSongs(){
 async function loadCiphers(songId){
     //console.log(url + `/get/ciphers?songid=${songId}`)
     ciphers[songId] = [];
-    await fetch(url + `/get/ciphers?songid=${songId}`, {headers: { "Access-Control-Allow-Origin": "*"}})
+    await fetch(url + `/get/ciphers?songid=${songId}`)
         .then((response) => response.json())
         .then((data) => {
             /* ciphers[songId] = data;
@@ -36,8 +37,7 @@ async function sendSong(data){
         method: 'POST',
         headers:{
             'Content-Type': 'application/json',
-            'charset': 'UTF-8',
-            "Access-Control-Allow-Origin": "*"
+            'charset': 'UTF-8'
         },
         body: JSON.stringify(data)
     }).then((response) => response.text())
@@ -54,7 +54,6 @@ async function sendCipher(data){
         headers:{
             'Content-Type': 'application/json',
             'charset': 'UTF-8', 
-            "Access-Control-Allow-Origin": "*"
         },
         body: JSON.stringify(data)
     }).then((response) => response.text())
