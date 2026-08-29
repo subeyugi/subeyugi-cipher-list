@@ -98,6 +98,22 @@ nav{
     padding: 10px;
 }
 
+.dialogTop_container{
+    display: flex;
+    margin: 0px;
+    padding: 0px;
+    height: 50px;
+}
+
+.dialogTop_left{
+    display: block;
+    margin: 0px;
+    width: 250px;
+}
+.dialogTop_right{
+    display: block;
+}
+
 ::-webkit-scrollbar {
     width: 8px;
     color: #f0f0f0;
@@ -155,6 +171,7 @@ div {
     border-bottom: 1px solid #d0d0d0;
 }
 
+/* 解読表示 */
 .code{
     display: inline-block;
     position: relative;
@@ -163,7 +180,7 @@ div {
     margin-top: 2px;
     /* margin-left: 50px; */
     padding-left: 10px;
-    padding-right: 10px;
+    padding-right: 30px;
     padding-top: 5px;
     padding-bottom: 5px;
     width: calc(100% - 20px);
@@ -173,7 +190,7 @@ div {
     line-height: 1.4;
 }
 
-.code_existLabel{
+/* .code_existLabel{
     display: inline-block;
     position: relative;
     font-family: "Noto Sans Mono", monospace;
@@ -189,27 +206,28 @@ div {
     color: #f0f0f0;
     font-size: 14px;
     line-height: 1.4;
-}
+} */
 
-.codescr{
+/* .codescr{
     display: inline-block;
     font-family: "Noto Sans Mono", monospace;
-    font-optical-sizing: auto;font-variation-settings:"wdth" 100;
+    font-optical-sizing: auto;
+    font-variation-settings:"wdth" 100;
     width: calc(100% - 10px);
     min-height: 16px;
     white-space: nowrap;
     overflow-x: scroll;
     padding: 0px;
     color: #f0f0f0;
-}
+} */
 
-.codeMain{
+/* .codeMain{
     display: flex;
     margin: 2px;
     padding: 8px;
     background-color: #202020;
     color: #f0f0f0;
-}
+} */
 
 .copyIcon{
     position: absolute;
@@ -254,8 +272,10 @@ textarea{
 
 .boxCipher{
     margin: 15px;
+    margin-bottom: 30px;
     padding: 5px;
     border: 1px solid #303030;
+    display: flex;
 }
 
 .songTitle{
@@ -266,7 +286,9 @@ textarea{
 
 .cipherTitle{
     height: 30px;
-    font-size: 18px;
+    font-size: 20px;
+    margin: 2px;
+    margin-left: 10px;
     color: #f0f0f0;
 }
 
@@ -284,10 +306,11 @@ textarea{
 
 .cipherDetails{
     margin: 6px;
-    margin-left: 30px;
+    margin-left: 10px;
     background-color: #101010;
     color: #f0f0f0;
-    font-size: 14px;
+    font-size: 16px;
+    width: calc(100%-30px);
 }
 
 .boxEditButton{
@@ -390,11 +413,16 @@ textarea{
 }
 
 .codeLabel{
-    width: 80px;
+    width: 65px;
     margin: 0px;
     padding-top: 2px;
+    font-size: 14px;
 }
 
 label{
     width: 100px;
+}
+
+.cipherBoxArea{
+    margin-top: 7px;
 }

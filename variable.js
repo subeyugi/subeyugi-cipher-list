@@ -2,6 +2,7 @@ let songs = []
 let ciphers = [];
 let nowSongId = undefined;
 let nowCipherId = undefined;
+let codeId = 0;
 
 /*
 

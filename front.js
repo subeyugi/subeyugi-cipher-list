@@ -32,8 +32,11 @@ async function showCiphers(songId){
         const nowObj = ciphers[songId][i];
         if(nowObj !=  undefined){
             let html = `<div class="boxCipher">
-                <div class="cipherTitle">${nowObj.id}.&nbsp;&nbsp;&nbsp;${nowObj.title}<input class="boxEditButton" type="button" value="編集" onclick="showCipherInputDialog(${songId}, ${i})"></div>
-                <div class="cipherDetails">${convertMarkdown2HTML(sanitizing(nowObj.details))}</div>
+                <span class="solvedBox ${nowObj.solved=="1"?"solved":"unsolved"} cipherBoxArea">${nowObj.id}</span>
+                <div style="width: 100%;">
+                    <div class="cipherTitle">${nowObj.title}<input class="boxEditButton" type="button" value="編集" onclick="showCipherInputDialog(${songId}, ${i})"></div>
+                    <div class="cipherDetails">${convertMarkdown2HTML(sanitizing(nowObj.details))}</div>
+                </div>
             </div>`;
             document.getElementById("cipherResult").insertAdjacentHTML("beforeend", html);
         }
@@ -47,7 +50,7 @@ function showCipherInputDialog(songId, cipherId){
     document.getElementById("cipherInputDialog").style.display="block";
     document.getElementById("cipherInputDialogSong").innerText = `song = [${songId}] ${songs[songId].title}`;
     if(cipherId != -1){
-        document.getElementById("cipherInputDialogCipher").innerText = `cipher = [${ciphers[songId][cipherId].id}] ${ciphers[songId][cipherId].title}`;
+        document.getElementById("cipherInputDialogCipher").innerText = `cipher = [${ciphers[songId][cipherId].id}]`;
         document.getElementById("postTextarea").value = ciphers[songId][cipherId].details;
     }else{
         document.getElementById("cipherInputDialogCipher").innerText = `cipher = [${-1}]`;
@@ -132,9 +135,9 @@ function convertMarkdown2HTML(text){
                     label += text[j];
                 }
                 if(label != ""){
-                    result += `<div class='codeContain'><div class='codeLabel'>${label}</div><div class='code'><div class='copyIcon'>📋</div>`;
+                    result += `<div class='codeContain'><div class='codeLabel'>${label}</div><div class='code' id='code_${codeId}'><div class='copyIcon' onclick='codeCopyClick(${codeId++})'>📋</div>`;
                 }else{
-                    result += "<div class='codeContain'><div class='codeLabel' style='display:none;'></div><div class='code'><div class='copyIcon'>📋</div>";
+                    result += `<div class='codeContain'><div class='codeLabel' style='display:none;'></div><div class='code' id='code_${codeId}'><div class='copyIcon' onclick='codeCopyClick(${codeId++})'>📋</div>`;
                 }
                 functionCharIdxs.push({type:"```", idx:i});
                 i = nextI;
@@ -237,3 +240,9 @@ function sendCipherButtonClicked(){
     document.getElementById("cipherInputDialog").style="display:none"
     showCiphers(nowSongId);
 }
+
+function codeCopyClick(id){
+    let text = document.getElementById(`code_${id}`).innerText.substring(3);
+    navigator.clipboard.writeText(text);
+}
+

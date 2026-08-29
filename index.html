@@ -45,8 +45,16 @@
   </div>
   <div class="cipherInputDialog" id="cipherInputDialog" style="display:none">
     <div class="closeButton" onclick="closeButtonClicked()">x</div>
-    <div id="cipherInputDialogSong">song = </div>
-    <div id="cipherInputDialogCipher">cipher = </div>
+    <div class="dialogTop_container">
+      <div class="dialogTop_left">
+        <div id="cipherInputDialogSong">song = </div>
+        <div id="cipherInputDialogCipher">cipher = </div>
+      </div>
+      <div class="dialogTop_right">
+        暗号名<input>
+        　　解読者<input>
+      </div>
+    </div>
     <div class="postContainer">
         <div class="postLeft">
             <button type="button" onclick="breakLineBtnClicked()">改行</button>
