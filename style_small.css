@@ -1,4 +1,4 @@
-
+@media screen and (max-width: 480px){
     *{
         font-size: 16px;
         font-family: "Noto Sans", "メイリオ", sans-serif;
@@ -22,14 +22,14 @@
         margin: 0px;
         padding :10px;
         padding-left: 35px;
-        font-size: 26px;
+        font-size: 20px;
         color: #f0f0f0;
     }
 
     header{
         margin: 0px;
         padding: 0px;
-        height: 60px;
+        height: 45px;
         background-color: #404040;
         color: #f0f0f0;
     }
@@ -442,3 +442,5 @@
     .cipherInputDialog_area{
         min-width: 230px;
     }
+
+}

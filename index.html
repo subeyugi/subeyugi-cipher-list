@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="style_small.css">
   <title>全て遊戯の所為です。　暗号一覧</title>
 </head>
 <body id="body">
@@ -46,13 +47,31 @@
   <div class="cipherInputDialog" id="cipherInputDialog" style="display:none">
     <div class="closeButton" onclick="closeButtonClicked()">x</div>
     <div class="dialogTop_container">
-      <div class="dialogTop_left">
-        <div id="cipherInputDialogSong">song = </div>
-        <div id="cipherInputDialogCipher">cipher = </div>
-      </div>
-      <div class="dialogTop_right">
-        暗号名<input>
-        　　解読者<input>
+      <div class="dialogTop_1">
+        <div class = "cipherInputDialog_area">
+          <div>曲名</div>
+          <div id="cipherInputDialog_song"></div>
+        </div>
+        <div class = "cipherInputDialog_area">
+          <div>解読No.</div>
+          <input type="number" id="cipherInputDialog_num">
+        </div>
+        <div class = "cipherInputDialog_area">
+          <div>解読名</div>
+          <input id="cipherInputDialog_caption">
+        </div>
+        <div class = "cipherInputDialog_area">
+          <div>解読者名</div>
+          <input id="cipherInputDialog_solver">
+        </div>
+        <div class = "cipherInputDialog_area">
+          <div>解読日</div>
+          <input type="date" class="cipherInputDialog_solvedDate">
+        </div>
+        <div class = "cipherInputDialog_area">
+          <div>解読済み</div>
+          <input type="checkbox" id="cipherInputDialog_isSolved">
+        </div>
       </div>
     </div>
     <div class="postContainer">

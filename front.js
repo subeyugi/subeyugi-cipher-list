@@ -48,12 +48,16 @@ function showCipherInputDialog(songId, cipherId){
     nowCipherId = cipherId;
     console.log(songId, cipherId)
     document.getElementById("cipherInputDialog").style.display="block";
-    document.getElementById("cipherInputDialogSong").innerText = `song = [${songId}] ${songs[songId].title}`;
+    document.getElementById("cipherInputDialog_song").innerText = `${songs[songId].title}`;
     if(cipherId != -1){
-        document.getElementById("cipherInputDialogCipher").innerText = `cipher = [${ciphers[songId][cipherId].id}]`;
+        document.getElementById("cipherInputDialog_num").value = ciphers[songId][cipherId].id;
+        document.getElementById("cipherInputDialog_caption").value = ciphers[songId][cipherId].title;
+        document.getElementById("cipherInputDialog_solver").value = ciphers[songId][cipherId].solverId;
+        document.getElementById("cipherInputDialog_solvedDate").value = ciphers[songId][cipherId].solvedTime;
+        document.getElementById("cipherInputDialog_isSolved").value = ciphers[songId][cipherId].isSolved;
         document.getElementById("postTextarea").value = ciphers[songId][cipherId].details;
     }else{
-        document.getElementById("cipherInputDialogCipher").innerText = `cipher = [${-1}]`;
+        document.getElementById("cipherInputDialog_num").innerText = `cipher = [${-1}]`;
         document.getElementById("postTextarea").value = "";
     }
     let text = sanitizing(document.getElementById("postTextarea").value);
@@ -223,11 +227,11 @@ function sendSongButtonClicked(){
     });
 }
 
-function sendCipherButtonClicked(){
+async function sendCipherButtonClicked(){
     const textarea = document.getElementById("postTextarea");
     let details = sanitizing(textarea.value)
     let date = new Date();
-    sendCipher({
+    await sendCipher({
         "id": nowCipherId, 
         "songId": nowSongId,
         "title": "タイトル", 
@@ -238,7 +242,7 @@ function sendCipherButtonClicked(){
         "deleted": 0
     });
     document.getElementById("cipherInputDialog").style="display:none"
-    showCiphers(nowSongId);
+    await showCiphers(nowSongId);
 }
 
 function codeCopyClick(id){
