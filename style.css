@@ -90,6 +90,10 @@ nav{
     color: #f0f0f0;
 }
 
+.songIcon{
+    display: none;
+}
+
 .box_left{
     display: block;
     text-decoration: none;
@@ -152,11 +156,11 @@ div {
     height: calc(100% - 160px);
 }
 
-.left {
+.left{
     width: 500px;
 }
 
-.right {
+.right{
     width: calc(100% - 510px);
     padding-left: 10px;
     border-left: 1px solid #ffffff;
