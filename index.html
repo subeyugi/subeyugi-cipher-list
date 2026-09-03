@@ -12,7 +12,7 @@
     <h1>全て遊戯の所為です。　暗号一覧</h1>
   </header>
 
-  <nav>
+  <nav style="display: none;">
     <ul class="ul_header">
       <li class="select"><a href="index.html" class="li_song">暗号一覧</a></li>
       <li><a class="li_song">履歴</a></li>
@@ -20,7 +20,8 @@
   </nav>
 
   <div class="container">
-    <div class="left">
+    <div class="songIcon" onclick="songIconClicked()">♪</div>
+    <div class="left" id="songArea">
       <ul class="ul_left" id="songList">
       </ul>
       <div>
