@@ -250,3 +250,12 @@ function codeCopyClick(id){
     navigator.clipboard.writeText(text);
 }
 
+function songIconClicked(){
+    console.log("ok")
+    let tmp = document.getElementById("songArea");
+    if(tmp.style.display == "none"){
+        tmp.style.display = "block";
+    }else{
+        tmp.style.display = "none";
+    }
+}
